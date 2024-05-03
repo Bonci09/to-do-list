@@ -1,0 +1,108 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ddd; /* Szürke szöveg */
+    background-color: #333; /* Sötét szürke háttér */
+    background-image: url("wave.png"), url("pattern.png"); /* Hullám és mintázat hozzáadása */
+    background-position: center bottom, top left;
+    background-repeat: no-repeat, repeat;
+}
+
+.task-table-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333; /* Sötét szürke */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #222; /* Sötét szürke */
+}
+
+.day-row th:first-child {
+    text-align: left;
+}
+
+.day-row th {
+    background-color: #222; /* Sötét szürke */
+}
+
+.hour-column {
+    background-color: #222; /* Sötét szürke */
+}
+
+.task-cell {
+    position: relative;
+}
+
+.task-checkbox {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #fff; /* Fehér */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+}
+
+.task-checkbox.checked::after {
+    content: '\2714'; /* Checkmark */
+    font-size: 14px;
+    color: #000000; /* Zöld */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .text-box {
+        padding-right: 30px; /* Space for checkbox */
+        outline: none; /* Fekete keret elrejtése */
+    }
+    
+    .download-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        background-color: #333; /* Sötét szürke */
+        color: #fff; /* Fehér */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .download-button:hover {
+        background-color: #555; /* Sötétebb szürke hover állapotban */
+    }
+    
+    .date-display-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .date-display {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
